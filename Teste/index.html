@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pesquisa de Produtos</title>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Nome de usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit"><a href="produtos-pf.html">Entrar</a></button>
+        </form>
+        <div id="signup-link-container">
+            <p>Não possui uma conta? <a href="#" id="signup-link" class="back-link">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <div id="product-selection-container" style="display: none;">
+        <h2>Escolha de Produtos</h2>
+        <!-- Aqui você pode adicionar os elementos para o usuário selecionar os produtos desejados -->
+    </div>
+
+    <div id="signup-container" style="display: none;">
+        <h2>Cadastro</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-username" placeholder="Nome de usuário" required>
+            <input type="password" id="signup-password" placeholder="Senha" required>
+            <select id="user-type">
+                <option value="pf">Pessoa Física</option>
+                <option value="varejista">Varejista</option>
+            </select>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="login-link-container">
+            <p>Já possui uma conta? <a href="#" id="login-link">Faça login</a></p>
+        </div>
+    </div>
+
+    <header id="header" style="display: none;">
+        <h1>Pesquisa de Produtos</h1>
+        <button id="logout-button">Sair</button>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Digite o nome do produto">
+            <button type="submit" id="search-button">Pesquisar</button>
+        </form>
+    </header>
+
+    <div id="results" style="display: none;"></div>
+
+    <div id="user-products-container" style="display: none;">
+        <h2>Seus produtos</h2>
+        <ul id="user-products-list"></ul>
+    </div>
+
+    <div id="comments-container" style="display: none;">
+        <h2>Comentários</h2>
+        <form id="comment-form">
+            <input type="text" id="comment-input" placeholder="Digite seu comentário" required>
+            <button type="submit">Adicionar Comentário</button>
+        </form>
+        <ul id="comments-list"></ul>
+    </div>
+
+    <div id="search-container">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Digite o termo de busca">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
