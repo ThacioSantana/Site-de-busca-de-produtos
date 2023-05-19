@@ -7,6 +7,8 @@ const signupLink = document.getElementById('signup-link');
 const loginLink = document.getElementById('login-link');
 const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
+const backLinks = document.getElementsByClassName('back-link');
+const productSelectionContainer = document.getElementById('product-selection-container'); // Obtenha uma referência ao contêiner de seleção de produtos
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -90,7 +92,6 @@ signupForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Lógica de criação de conta para o cadastro
-    // ...
 });
 
 // Mostrar tela de login por padrão
@@ -101,11 +102,90 @@ function goBack() {
     history.back();
 }
 
-// Obter todos os elementos com a classe "back-link"
-const backLinks = document.getElementsByClassName('back-link');
-
 // Adicionar um evento de clique a cada link
 for (let i = 0; i < backLinks.length; i++) {
     const link = backLinks[i];
     link.addEventListener('click', goBack);
 }
+
+// Adicione um ouvinte de evento ao formulário quando for enviado
+productSelectionContainer.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita o envio do formulário
+
+  // Obtenha todos os elementos de input do tipo checkbox dentro do contêiner de seleção de produtos
+  const checkboxes = productSelectionContainer.querySelectorAll('input[type="checkbox"]');
+
+  // Array para armazenar os produtos selecionados
+  const selectedProducts = [];
+
+  // Itere sobre os checkboxes para verificar quais estão marcados
+  checkboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      // Adicione o valor do checkbox (nome do produto) ao array de produtos selecionados
+      selectedProducts.push(checkbox.value);
+    }
+  });
+
+  // Exiba os produtos selecionados (exemplo)
+  alert('Produtos selecionados: ' + selectedProducts.join(', '));
+
+  // Limpe a seleção de produtos (opcional)
+  checkboxes.forEach(function(checkbox) {
+    checkbox.checked = false;
+  });
+});
+
+// Adicione um ouvinte de evento ao contêiner para capturar cliques nos botões "Adicionar Comentário"
+productSelectionContainer.addEventListener('click', function(event) {
+  if (event.target.classList.contains('add-comment')) {
+    event.preventDefault();
+    
+    const commentButton = event.target;
+    const productItem = commentButton.parentNode;
+    const commentsList = productItem.querySelector('.comments-list');
+    
+    const commentInput = document.createElement('input');
+    commentInput.type = 'text';
+    commentInput.placeholder = 'Digite seu comentário';
+    
+    const commentSubmitButton = document.createElement('button');
+    commentSubmitButton.textContent = 'Enviar';
+    
+    const commentForm = document.createElement('form');
+    commentForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const commentText = commentInput.value;
+      if (commentText.trim() !== '') {
+        const commentListItem = document.createElement('li');
+        commentListItem.textContent = commentText;
+        commentsList.appendChild(commentListItem);
+      }
+      
+      commentInput.value = '';
+      commentInput.focus();
+    });
+    
+    commentForm.appendChild(commentInput);
+    commentForm.appendChild(commentSubmitButton);
+    
+    productItem.appendChild(commentForm);
+  }
+});
+
+// Adicione um ouvinte de evento ao formulário de envio para capturar a seleção de produtos
+const submitButton = document.getElementById('submit-products');
+submitButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  const checkboxes = productSelectionContainer.querySelectorAll('input[type="checkbox"]');
+  
+  const selectedProducts = [];
+  checkboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      selectedProducts.push(checkbox.value);
+    }
+  });
+  
+  alert('Produtos selecionados: ' + selectedProducts.join(', '));
+});
