@@ -1,0 +1,50 @@
+/* Estilos para o contêiner de login */
+#login-container {
+  margin: 50px auto;
+  width: 300px;
+  background: linear-gradient(to bottom, #4CAF50, #45A049);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#login-container h2 {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+#login-container input[type="text"],
+#login-container input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#login-container button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#login-link-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilos para o link de cadastro */
+#signup-link-container a {
+  color: white;
+}
+
+#signup-link-container a:hover {
+  text-decoration: underline;
+}

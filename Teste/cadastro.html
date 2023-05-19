@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="styles-cadastro.css">
+
+</head>
+<body>
+    <div id="signup-container">
+        <h2>Cadastro</h2>
+        <div id="signup-type-container">
+            <input type="radio" name="usertype" id="usertype-individual" value="individual" checked>
+            <label for="usertype-individual">Pessoa Física</label>
+            <input type="radio" name="usertype" id="usertype-retailer" value="retailer">
+            <label for="usertype-retailer">Varejista</label>
+        </div>
+        <form id="signup-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+          
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          
+            <div id="cpf-container">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" required>
+            </div>
+          
+            <div id="cnpj-container" style="display: none;">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" required>
+            </div>
+          
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="login-link-container">
+            <p>Já possui uma conta? <a href="index.html" id="login-link">Faça login</a></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Atualizar campos de acordo com o tipo de usuário selecionado
+        var signupTypeContainer = document.getElementById("signup-type-container");
+        var cpfContainer = document.getElementById("cpf-container");
+        var cnpjContainer = document.getElementById("cnpj-container");
+
+        signupTypeContainer.addEventListener("change", function() {
+            if (document.getElementById("usertype-individual").checked) {
+                cpfContainer.style.display = "block";
+                cnpjContainer.style.display = "none";
+            } else {
+                cpfContainer.style.display = "none";
+                cnpjContainer.style.display = "block";
+            }
+        });
+
+        // Redirecionar para a página de produtos correta após o cadastro
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impedir o envio do formulário
+
+            if (document.getElementById("usertype-individual").checked) {
+                window.location.href = "produtos-pf.html"; // Substitua "produtos-pf.html" pela página de produtos para pessoa física
+            } else {
+                window.location.href = "produtos-varejista.html"; // Substitua "produtos-varejista.html" pela página de produtos para varejistas
+            }
+        });
+    </script>
+</body>
+</html>

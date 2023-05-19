@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Pesquisa de Produtos</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles-login.css">
+
 </head>
 <body>
     <div id="login-container">
@@ -13,29 +14,7 @@
             <button type="submit" id="login-button">Entrar</button>
         </form>
         <div id="signup-link-container">
-            <p>Não possui uma conta? <a href="#" id="signup-link" class="back-link">Cadastre-se</a></p>
-        </div>
-    </div>
-
-    <div id="signup-container" style="display: none;">
-        <h2>Cadastro</h2>
-        <form id="signup-form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" required>
-          
-            <label for="phone">Telefone:</label>
-            <input type="tel" id="phone" required>
-          
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-          
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" required>
-          
-            <button type="submit">Cadastrar</button>
-        </form>
-        <div id="login-link-container">
-            <p>Já possui uma conta? <a href="#" id="login-link">Faça login</a></p>
+            <p>Não possui uma conta? <a href="cadastro.html" id="signup-container" class="back-link">Cadastre-se</a></p>
         </div>
     </div>
 
@@ -50,20 +29,17 @@
 
     <div id="product-selection-container" style="display: none;">
         <h2>Escolha de Produtos</h2>
-        <!-- Aqui você pode adicionar os elementos para o usuário selecionar os produtos desejados -->
     </div>
 
     <div id="results" style="display: none;"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
     <script>
         // Redirecionar para a página de produtos após o login
         document.getElementById("login-button").addEventListener("click", function(event) {
             event.preventDefault(); // Impedir o envio do formulário
-            window.location.href = "produtos-pf.html"; 
+            window.location.href = "produtos-pf.html"; // Substitua "produtos-pf.html" pela página de produtos para pessoa física
         });
     </script>
 </body>
