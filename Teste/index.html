@@ -10,28 +10,28 @@
         <form id="login-form">
             <input type="text" id="username" placeholder="Nome de usuário" required>
             <input type="password" id="password" placeholder="Senha" required>
-            <button type="submit"> <a href="produtos-pf.html">Entrar</a></button>
-            
+            <button type="submit" id="login-button">Entrar</button>
         </form>
         <div id="signup-link-container">
-            <p>Não possui uma conta? <a href="#" id="signup-link" , href="#" class="back-link"  >Cadastre-se</a></p>
+            <p>Não possui uma conta? <a href="#" id="signup-link" class="back-link">Cadastre-se</a></p>
         </div>
-    </div>
-
-    <div id="product-selection-container" style="display: none;">
-        <h2>Escolha de Produtos</h2>
-        <!-- Aqui você pode adicionar os elementos para o usuário selecionar os produtos desejados -->
     </div>
 
     <div id="signup-container" style="display: none;">
         <h2>Cadastro</h2>
         <form id="signup-form">
-            <input type="text" id="signup-username" placeholder="Nome de usuário" required>
-            <input type="password" id="signup-password" placeholder="Senha" required>
-            <select id="user-type">
-                <option value="pf">Pessoa Física</option>
-                <option value="varejista">Varejista</option>
-            </select>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+          
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" required>
+          
             <button type="submit">Cadastrar</button>
         </form>
         <div id="login-link-container">
@@ -48,22 +48,23 @@
         </form>
     </header>
 
+    <div id="product-selection-container" style="display: none;">
+        <h2>Escolha de Produtos</h2>
+        <!-- Aqui você pode adicionar os elementos para o usuário selecionar os produtos desejados -->
+    </div>
+
     <div id="results" style="display: none;"></div>
 
-    <div id="user-products-container" style="display: none;">
-        <h2>Seus produtos</h2>
-        <ul id="user-products-list"></ul>
-    </div>
-
-    <div id="comments-container" style="display: none;">
-        <h2>Comentários</h2>
-        <form id="comment-form">
-            <input type="text" id="comment-input" placeholder="Digite seu comentário" required>
-            <button type="submit">Adicionar Comentário</button>
-        </form>
-        <ul id="comments-list"></ul>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Redirecionar para a página de produtos após o login
+        document.getElementById("login-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Impedir o envio do formulário
+            window.location.href = "produtos-pf.html"; 
+        });
+    </script>
 </body>
 </html>

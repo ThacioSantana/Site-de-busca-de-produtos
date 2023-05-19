@@ -1,13 +1,13 @@
 /* Estilos para o contêiner de login */
 #login-container {
-    margin: 50px auto;
-    width: 300px;
-  }
-  
-#login-container h2 {
-    margin-bottom: 20px;
+  margin: 50px auto;
+  width: 300px;
 }
-  
+
+#login-container h2 {
+  margin-bottom: 20px;
+}
+
 #login-container input[type="text"],
 #login-container input[type="password"] {
   display: block;
@@ -15,7 +15,7 @@
   margin-bottom: 10px;
   padding: 5px;
 }
-  
+
 #login-container button[type="submit"] {
   display: block;
   width: 100%;
@@ -28,47 +28,9 @@
 }
 
 #login-link-container {
-    margin-top: 20px;
-  }
-
-
-#signup-link-container {
   margin-top: 20px;
 }
 
-.login-container {
-  max-width: 300px;
-  margin: 0 auto;
-  margin-top: 100px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.login-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
 
 /* Estilos para o contêiner de cadastro */
 #signup-container {
@@ -78,13 +40,13 @@
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 5px;
-  }
-  
+}
+
 #signup-container h2 {
   text-align: center;
   margin-bottom: 20px;
 }
-  
+
 #signup-container input[type="text"],
 #signup-container input[type="password"],
 #signup-container select {
@@ -96,7 +58,7 @@
   border-radius: 4px;
   font-size: 16px;
 }
-  
+
 #signup-container button[type="submit"] {
   display: block;
   width: 100%;
@@ -108,93 +70,35 @@
   font-size: 16px;
   cursor: pointer;
 }
-  
+
 #signup-link-container,
 #login-link-container {
   text-align: center;
   margin-top: 15px;
 }
-  
+
 #signup-link-container a,
-  #login-link-container a {
-    color: #0d32d6;
+#login-link-container a {
+  color: #0d32d6;
 }
-  
+
 #signup-link-container a:hover,
 #login-link-container a:hover {
- text-decoration: underline;
+  text-decoration: underline;
 }
 
-#product-selection-container {
-  margin-top: 20px;
-  padding: 20px;
-  text-align: center;
-  background-color: #f5f5f5;
-}
 
-#product-selection-container h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.product-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.product-item input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-#submit-products {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-#signup-container {
-  margin: 50px auto;
-  width: 300px;  
-}
-  
-#signup-container h2 {
-  margin-bottom: 20px;
-}
-  
-#signup-container input[type="text"],
-#signup-container input[type="password"],
-#signup-container select {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-  
-#signup-container button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-  
 /* Estilos para a barra de cabeçalho */
 #header {
   background-color: #333;
   padding: 10px;
   color: white;
 }
-  
+
 #header h1 {
-    margin: 0;
+  margin: 0;
 }
-  
+
 #header button {
   background-color: #4CAF50;
   color: white;
@@ -203,45 +107,48 @@
   float: right;
   cursor: pointer;
 }
-  
+
+
 /* Estilos para o contêiner de resultados */
 #results {
   margin: 50px auto;
   width: 600px;
 }
-  
+
+
 /* Estilos para o contêiner de produtos do usuário */
 #user-products-container {
   margin: 50px auto;
   width: 300px;
 }
-  
+
 #user-products-container h2 {
   margin-bottom: 20px;
 }
-  
+
 #user-products-container ul {
   list-style-type: none;
   padding: 0;
 }
-  
+
+
 /* Estilos para o contêiner de comentários */
 #comments-container {
   margin: 50px auto;
   width: 300px;
 }
-  
+
 #comments-container h2 {
   margin-bottom: 20px;
 }
-  
+
 #comments-container form input[type="text"] {
   display: block;
   width: 100%;
   margin-bottom: 10px;
   padding: 5px;
 }
-  
+
 #comments-container form button[type="submit"] {
   display: block;
   width: 100%;
@@ -251,16 +158,17 @@
   border: none;
   cursor: pointer;
 }
-  
+
 #comments-container ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
+
 
 /* Estilos para os produtos */
 .product-image {
-  height: auto; /* Manter a proporção original */
-  width: calc(75% - 10px); /* 75% do container - 10px de espaçamento */
-  padding-bottom: 75%; /* Proporção de 4:3 (75% / 100% * 100%) */
-  object-fit: cover; /* Manter a imagem dentro do contêiner */
+  height: auto;
+  width: calc(75% - 10px);
+  padding-bottom: 75%;
+  object-fit: cover;
 }
