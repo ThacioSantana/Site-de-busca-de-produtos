@@ -155,8 +155,7 @@
   border: none;
   cursor: pointer;
 }
-  
-/* Estilos para o contêiner de cadastro */
+
 #signup-container {
   margin: 50px auto;
   width: 300px;  
@@ -226,7 +225,7 @@
   padding: 0;
 }
   
-  /* Estilos para o contêiner de comentários */
+/* Estilos para o contêiner de comentários */
 #comments-container {
   margin: 50px auto;
   width: 300px;
@@ -256,4 +255,12 @@
 #comments-container ul {
     list-style-type: none;
     padding: 0;
+}
+
+/* Estilos para os produtos */
+.product-image {
+  height: auto; /* Manter a proporção original */
+  width: calc(75% - 10px); /* 75% do container - 10px de espaçamento */
+  padding-bottom: 75%; /* Proporção de 4:3 (75% / 100% * 100%) */
+  object-fit: cover; /* Manter a imagem dentro do contêiner */
 }

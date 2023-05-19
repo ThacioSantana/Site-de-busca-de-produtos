@@ -189,3 +189,15 @@ submitButton.addEventListener('click', function(event) {
   
   alert('Produtos selecionados: ' + selectedProducts.join(', '));
 });
+
+// Obtém todos os botões dos produtos
+var productButtons = document.getElementsByClassName("product-button");
+
+// Adiciona um evento de clique para cada botão do produto
+for (var i = 0; i < productButtons.length; i++) {
+    productButtons[i].addEventListener("click", function() {
+        // Aqui você pode definir o que acontece quando o botão do produto é clicado
+        // Pode ser abrir uma nova página com os detalhes do produto ou exibir uma janela modal, por exemplo
+        // Exemplo: window.location.href = "detalhes_produto.html";
+    });
+}
