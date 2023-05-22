@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Site-de-busca-de-produtos/Teste/css/styles-produto.css">
+    <title>Produtos</title>
+</head>
+
+<body>
+    <div class="header-bar">
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="">Categorias</a></li>
+                <li class="nav-item"><a href="">Lojas Parceiras</a></li>
+                <li class="nav-item"><a href="">Produtos</a></li>
+                <li class="nav-item"><a href="">Ofertas</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-bar">
+        <form id="search-form">
+            <input id="search-input" type="text" placeholder="Digite sua busca...">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <div id="results">
+        <div class="product-container">
+            <div class="product-item">
+                <img src="/Site-de-busca-de-produtos/Teste/imagens/cuscuz" alt="Imagem do Produto" style="max-width: 200px;">
+                <h3>cuscuz</h3>
+                <p>Descrição do Produto</p>
+                <button class="product-button">Ver Detalhes</button>
+            </div>
+          
+            <!-- Adicione mais produtos com a mesma estrutura acima -->
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/Site-de-busca-de-produtos/Teste/js/script.js"></script>
+</body>
+</html>
