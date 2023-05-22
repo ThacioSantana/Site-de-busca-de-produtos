@@ -1,22 +1,31 @@
-// Função de pesquisa de produtos
-function searchProducts(query) {
-  // Converte a consulta para minúsculas para uma pesquisa case-insensitive
+function searchProducts(query, category, maxPrice, minStock) {
   query = query.toLowerCase();
 
-  // Filtra os produtos com base na consulta
   const filteredProducts = products.filter(product => {
     const productName = product.name.toLowerCase();
-    return productName.includes(query);
+    const productCategory = product.category.toLowerCase();
+    const productPrice = product.price;
+    const productStock = product.stock;
+
+    return (
+      productName.includes(query) &&
+      productCategory.includes(category.toLowerCase()) &&
+      productPrice <= maxPrice &&
+      productStock >= minStock
+    );
   });
 
   return filteredProducts;
 }
 
-// Exemplo de uso da função de pesquisa de produtos
-const searchTerm = 'camiseta';
-const searchResults = searchProducts(searchTerm);
+// Obtenha todos os botões dos produtos
+const productButtons = document.getElementsByClassName("product-button");
 
-console.log(`Resultados da pesquisa para "${searchTerm}":`);
-searchResults.forEach(product => {
-  console.log(`- ${product.name} - R$ ${product.price.toFixed(2)}`);
-});
+// Adicione um manipulador de eventos a cada botão
+for (let i = 0; i < productButtons.length; i++) {
+  productButtons[i].addEventListener("click", function() {
+    // Aqui você pode definir a lógica para exibir os detalhes do produto
+    // por exemplo, abrir uma nova página com os detalhes do produto ou exibir um modal
+    // Exemplo: window.location.href = "detalhes_produto.html";
+  });
+}
