@@ -1,46 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Site-de-busca-de-produtos/Teste/css/styles-produto.css">
-    <title>Produtos</title>
-</head>
+    <html lang="pt-br">
+    <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/Site-de-busca-de-produtos/Teste/css/styles-produto.css">
+            <title>Produtos</title>
+    </head>
 
 <body>
-    <div class="header-bar">
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-item"><a href="">Categorias</a></li>
-                <li class="nav-item"><a href="">Lojas Parceiras</a></li>
-                <li class="nav-item"><a href="">Produtos</a></li>
-                <li class="nav-item"><a href="">Ofertas</a></li>
-            </ul>
-        </nav>
-    </div>
+    
+    <div id="head-menu">
+            <form action="#">
+            <!--search bar-->
+                <input class="search-bar" type="text" placeholder="Digite sua busca...">
+                <button class="search-button" type="submit"><i class="gg-search"></i></button>
+            </form>
 
-    <div class="search-bar">
-        <form id="search-form">
-            <input id="search-input" type="text" placeholder="Digite sua busca...">
-            <button type="submit">Buscar</button>
+        <form id="menu-bar" action="#">
+            <!--menu navigation bars-->
+            <button class="categories"><i class="gg-list"></i>Categorias</button>
+            <button class="partners"><i class="gg-briefcase"></i>Lojas parceiras</button>
+            <button class="produtcs"><i class="gg-box"></i>Produtos</button>
+            <button class="offers"><i class="gg-math-percent"></i>Ofertas</button>
         </form>
-    </div>
-
-    <div id="results">
-        <div class="product-container">
-            <div class="product-item">
-                <img src="/Site-de-busca-de-produtos/Teste/imagens/cuscuz" alt="Imagem do Produto" style="max-width: 200px;">
-                <h3>cuscuz</h3>
-                <p>Descrição do Produto</p>
-                <button class="product-button">Ver Detalhes</button>
-            </div>
-          
-            <!-- Adicione mais produtos com a mesma estrutura acima -->
-        </div>
+    
     </div>
     
+</header>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/Site-de-busca-de-produtos/Teste/js/scritp-produtos-pf.js"></script>
+        
 </body>
 </html>

@@ -1,46 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Pesquisa de Produtos</title>
-    <link rel="stylesheet" type="text/css" href="/Site-de-busca-de-produtos/Teste/css/styles-login.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Site-de-busca-de-produtos/Teste/css/styles-login.css">
+    <title>Test</title>
 </head>
 <body>
-    <div id="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <input type="text" id="username" placeholder="Nome de usuário" required>
-            <input type="password" id="password" placeholder="Senha" required>
-            <button type="submit" id="login-button">Entrar</button>
-        </form>
-        <div id="signup-link-container">
-            <p>Não possui uma conta? <a href="cadastro.html" id="signup-container" class="back-link">Cadastre-se</a></p>
+    <main>
+        <div class="login-container">
+            <h1 class="login-title">FAÇA O LOGIN</h1>
+            <form action="">
+                <span>E-mail:</span> <br>
+                <input class="email" type="email"><br>
+                <span>Senha:</span> <br>
+                <input class="pass" type="password"> <br><br>
+                <input class="checkbox" type="checkbox"> <p class="conectado">Mantenha-me conectado</p>
+                <button class="enter" type="submit">ENTRAR</button>
+            </form>  
+            
+            <div id="signup-link-container">
+                <p class="login-footer">Não tem conta? Faça uma nova <a href="/Site-de-busca-de-produtos/Teste/html/cadastro.html">Cadastre-se.</a></p>
+            </div>
+
         </div>
-    </div>
-
-    <header id="header" style="display: none;">
-        <h1>Pesquisa de Produtos</h1>
-        <button id="logout-button">Sair</button>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Digite o nome do produto">
-            <button type="submit" id="search-button">Pesquisar</button>
-        </form>
-    </header>
-
-    <div id="product-selection-container" style="display: none;">
-        <h2>Escolha de Produtos</h2>
-    </div>
-
-    <div id="results" style="display: none;"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        
+        </div>
+        
+        <div class="logo">
+            <img src="/Site-de-busca-de-produtos/Teste/imagens/aiki-barato-logo.jpeg" alt="AikiBarato">
+        </div>
+    
+    </main>
     <script src="/Site-de-busca-de-produtos/Teste/js/script.js"></script>
-    <script>
-        // Redirecionar para a página de produtos após o login
-        document.getElementById("login-button").addEventListener("click", function(event) {
-            event.preventDefault(); // Impedir o envio do formulário
-            window.location.href = "produtos-pf.html"; // Substitua "produtos-pf.html" pela página de produtos para pessoa física
-        });
-    </script>
 </body>
 </html>

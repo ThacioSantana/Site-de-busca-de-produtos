@@ -1,50 +1,180 @@
-/* Estilos para o contêiner de login */
-#login-container {
-  margin: 50px auto;
-  width: 300px;
-  background: linear-gradient(to bottom, #4CAF50, #45A049);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+/*all content*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
-#login-container h2 {
-  margin-bottom: 20px;
-  color: white;
-  text-align: center;
+
+
+/*head content*/
+
+
+
+
+#head-menu {
+    background-color: #FFD21E;
+    width: 1920px;
+    height: 160px;
+    position: absolute;
 }
 
-#login-container input[type="text"],
-#login-container input[type="password"] {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 5px;
+#menu-bar {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 90px;
+    left:620px;   
 }
 
-#login-container button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: white;
-  color: black;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 5px;
+#menu-bar button {
+    font-family: 'Poppins', sans-serif;
+    max-height: fit-content;
+    padding: 10px 40px;
+    margin: 10px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    
 }
 
-#login-link-container {
-  margin-top: 20px;
-  text-align: center;
+#menu-bar button:hover {
+    text-decoration: underline;
+    
 }
 
-/* Estilos para o link de cadastro */
-#signup-link-container a {
-  color: white;
+.gg-list, .gg-briefcase, .gg-box{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top:18px;
+    left:-30px;
 }
 
-#signup-link-container a:hover {
-  text-decoration: underline;
+.gg-math-percent {
+    position: absolute;
+    top:10px;
+    left:-30px;
 }
+
+
+
+.search-bar{
+    position: absolute;
+    top:10px;
+    left:690px;
+    width: 500px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+.search-button {
+    position: absolute;
+    top:20px;
+    left: 1175px;
+    width: 35px;
+    height: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.search-button i {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*main content styles*/
+main{
+    position: absolute;
+}
+
+img{
+    max-width: 278px;
+}
+
+.logo {
+    position: absolute;
+    left: 565px;
+    top: 240px;
+}
+
+
+.login-container {
+    position: absolute;
+    width: 480px;
+    height: 550px;
+    left: 840px;
+    top: 240px;
+    background: #FFD21E;
+    border-radius: 0px 8px 8px 0px;
+    text-align: center;
+    
+}
+
+.login-title{
+    font-weight:600;
+    margin:30px;
+    margin-bottom: 100px;
+}
+
+.login-footer{
+    position: absolute;
+    top: 500px;
+    left:60px;
+    color: black;
+}
+
+.login-container a {
+    color: black;
+}
+
+
+span {
+    position: absolute;
+    left:90px;
+}
+
+.email, .pass{
+    width: 300px;
+    height: 25px;
+    border: none;
+    border-radius: 1px;
+}
+
+.checkbox {
+    position: absolute;
+    left: 90px;
+    top:310px;
+    
+}
+
+.conectado {
+    position: absolute;
+    left: 110px;
+}
+
+.enter {
+    position: absolute;
+    top:375px;
+    left:180px;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background-color: #3AB6FE;
+}
+
+.enter:hover {
+    background-color: #3aa1fe;
+}
+/*end of main content styles*/

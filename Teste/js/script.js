@@ -161,3 +161,4 @@ for (let i = 0; i < productButtons.length; i++) {
     // Exemplo: window.location.href = "detalhes_produto.html";
   });
 }
+
